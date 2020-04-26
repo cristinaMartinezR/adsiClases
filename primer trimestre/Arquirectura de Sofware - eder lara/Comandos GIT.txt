@@ -1,0 +1,6 @@
+https://github.com/EderLara/adsiClases.git
+git init
+git add .
+git commit -m "Inicio de repositorio de actividades ADSI"
+git remote add origin https://github.com/-usuario-/adsiClases.git
+git push -u origin master --force
