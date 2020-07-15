@@ -1,0 +1,108 @@
+<html lang="es">
+   <head>
+      <meta charset="UTF-8">
+      <link rel="apple-touch-icon" type="image/png" href="https://static.codepen.io/assets/favicon/apple-touch-icon-5ae1a0698dcc2402e9712f7d01ed509a57814f994c660df9f7a952f3060705ee.png">
+      <meta name="apple-mobile-web-app-title" content="CodePen">
+      <link rel="shortcut icon" type="image/x-icon" href="https://static.codepen.io/assets/favicon/favicon-aec34940fbc1a6e787974dcd360f2c6b63348d4b1f4e06c77743096d55480f33.ico">
+      <link rel="mask-icon" type="" href="https://static.codepen.io/assets/favicon/logo-pin-8f3771b1072e3c38bd662872f6b673a722f4b3ca2421637d5596661b4e2132cc.svg" color="#111">
+      <title>CodePen - Netflix Landing Page Clone</title>
+      <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
+      <script>
+         window.console = window.console || function(t) {};
+      </script>
+      <script>
+         if (document.location.search.match(/type=embed/gi)) {
+           window.parent.postMessage("resize", "*");
+         }
+      </script>
+      <style>
+        /* Global Styles */
+        :root
+        
+
+        </style>
+   </head>
+   <body translate="yes">
+     <header class="showcase">
+       *{
+         box-sizing:border-box;
+         margin:0;
+         padding:0;
+       }
+       body{
+         font-family:"Arial",sans-serif;
+         background-color: #000;
+         color: #999;
+       }
+       ul{
+         list-style:none;
+       }
+       h1,h2,h3,h4{
+         clor:#fff;
+       }
+       a{
+         color: #fff;
+         text-decoration:none;
+       }
+       p{
+         margen:0.5rem 3;
+
+       }
+       img{
+         width: 100%;
+
+       }
+
+       .shoecase{
+         width:100%;
+         height: 93vh;
+         position:relative;
+         background: url('img/img1.jpg') no-repeat center center/cover;
+       }
+     </header>
+      
+      
+
+
+
+      <script src="https://static.codepen.io/assets/common/stopExecutionOnTimeout-157cd5b220a5c80d4ff8e0e70ac069bffd87a61252088146915e8726e5d9f147.js"></script>
+      <script id="rendered-js">
+         const tabItems = document.querySelectorAll('.tab-item');
+         const tabContentItems = document.querySelectorAll('.tab-content-item');
+         
+         // Select tab content item
+         function selectItem(e) {
+           // Remove all show and border classes
+           removeBorder();
+           removeShow();
+           // Add border to current tab item
+           this.classList.add('tab-border');
+           // Grab content item from DOM
+           const tabContentItem = document.querySelector(`#${this.id}-content`);
+           // Add show class
+           tabContentItem.classList.add('show');
+         }
+         
+         // Remove bottom borders from all tab items
+         function removeBorder() {
+           tabItems.forEach(item => {
+             item.classList.remove('tab-border');
+           });
+         }
+         
+         // Remove show class from all content items
+         function removeShow() {
+           tabContentItems.forEach(item => {
+             item.classList.remove('show');
+           });
+         }
+         
+         // Listen for tab item click
+         tabItems.forEach(item => {
+           item.addEventListener('click', selectItem);
+         });
+         //# sourceURL=pen.js
+             
+      </script>
+   </body>
+</html>
